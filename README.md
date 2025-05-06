@@ -9,7 +9,6 @@ This is a responsive *real-time chat website* built using *React, **Node.js, **S
 - 💬 *Live Chat*: Real-time messaging powered by Socket.io.
 - 📱 *Responsive Design*: Mobile-friendly layout with Tailwind CSS.
 - 🧑‍🤝‍🧑 *User List*: View and connect with available users.
-- ☁ *Full-stack Deployment*: Entire app hosted on Vercel.
 
 
 ## 🛠 Tech Stack
@@ -17,4 +16,4 @@ This is a responsive *real-time chat website* built using *React, **Node.js, **S
 - *Frontend*: React, Tailwind CSS
 - *Backend*: Node.js, Express.js, Socket.io
 - *Database*: MongoDB (via Mongoose)
-- *Deployment*: Vercel
+
