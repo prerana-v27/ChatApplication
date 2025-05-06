@@ -1,34 +1,34 @@
 import express from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
-import userRoute from "./route/user.route.js";
+import cors from "cors";
+import cookieParser from "cookie-parser";
 
-const app = express();
+import userRoute from "./routes/user.route.js";
+import messageRoute from "./routes/message.route.js";
+import { app, server } from "./SocketIO/server.js";
+
 dotenv.config();
 
-// Middleware to parse JSON
+// middleware
 app.use(express.json());
+app.use(cookieParser());
+app.use(cors());
 
-const PORT = process.env.PORT || 5001;
+const PORT = process.env.PORT || 3001;
 const URI = process.env.MONGODB_URI;
 
-// Connect to MongoDB
-const connectDB = async () => {
-  try {
-    await mongoose.connect(URI);  // Clean connection without deprecated options
-    console.log("MongoDB Connected");
-  } catch (error) {
-    console.error("MongoDB Connection Error:", error.message);
-    process.exit(1); // Exit process if MongoDB connection fails
-  }
-};
+try {
+    mongoose.connect(URI);
+    console.log("Connected to MongoDB");
+} catch (error) {
+    console.log(error);
+}
 
-connectDB();
+//routes
+app.use("/api/user", userRoute);
+app.use("/api/message", messageRoute);
 
-// Routes
-app.use("/user", userRoute);
-
-// Start server
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+server.listen(PORT, () => {
+    console.log(`Server is Running on port ${PORT}`);
 });

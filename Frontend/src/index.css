@@ -11,3 +11,8 @@
 .users-container::-webkit-scrollbar {
     display:none;
 }
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #e5e7eb inset !important; /* gray-200 */
+  -webkit-text-fill-color: #000 !important;
+}
