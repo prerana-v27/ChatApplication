@@ -1,6 +1,6 @@
 # 💬 Real-Time Chat Application
 
-This is a responsive *real-time chat website* built using *React, **Node.js, **Socket.io, and **MongoDB*. Users can register, log in, and instantly chat with others in real-time. The application features a clean user interface and works across all device sizes.
+This is a responsive real-time chat application built using React, Node.js, Socket.io, and MongoDB. It enables users to register, log in, and exchange messages instantly with others in a smooth, real-time environment. The application features a clean and user-friendly interface, optimized for all screen sizes. While the project is currently not deployed, it can be run locally to experience the full functionality of live chat, including authentication and real-time messaging.
 
 
 ## 🌟 Key Features
